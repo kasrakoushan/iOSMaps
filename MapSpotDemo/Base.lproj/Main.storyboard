@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MapSpotDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nl3-ba-Ftb">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="320"/>
+                            </mapView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JiN-4l-0EQ">
+                                <rect key="frame" x="0.0" y="320" width="600" height="280"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JiN-4l-0EQ" firstAttribute="top" secondItem="nl3-ba-Ftb" secondAttribute="bottom" id="DeO-Tl-8u5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JiN-4l-0EQ" secondAttribute="trailing" constant="-20" id="G2U-Pm-Ze8"/>
+                            <constraint firstItem="JiN-4l-0EQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="THH-kT-YWg"/>
+                            <constraint firstItem="nl3-ba-Ftb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="YIH-gZ-iiu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nl3-ba-Ftb" secondAttribute="trailing" constant="-20" id="Yyh-MN-jDV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JiN-4l-0EQ" secondAttribute="bottom" id="adN-47-YI7"/>
+                            <constraint firstItem="nl3-ba-Ftb" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" constant="20" id="go9-2D-mt2"/>
+                            <constraint firstItem="nl3-ba-Ftb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="hoc-ad-3a3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="map" destination="nl3-ba-Ftb" id="BE8-YJ-J0B"/>
+                        <outlet property="table" destination="JiN-4l-0EQ" id="JrI-Jb-khU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="389"/>
+        </scene>
+    </scenes>
+</document>
